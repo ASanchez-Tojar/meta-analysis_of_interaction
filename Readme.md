@@ -1,0 +1,1 @@
+This repository contains code and data used for a literature review on the use of factorial meta-analysis/meta-analysis of interaction in Ecology.
