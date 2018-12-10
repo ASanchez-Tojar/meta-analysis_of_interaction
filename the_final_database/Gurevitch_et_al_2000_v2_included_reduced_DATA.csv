@@ -1,0 +1,79 @@
+studyID,title,year,reported_effect_size_used,methods_used,comments
+Gurevitch1,Meta-analysis suggests biotic resistance in freshwater environments is driven by consumption rather than competition,2014,,0,
+Gurevitch2,How beneficial are nurse plants? A meta-analysis of the effects of cushion plants on high-Andean plant communities,2009,,0,
+Gurevitch3,Effects of UVB radiation on marine and freshwater organisms: A synthesis through meta-analysis,2007,,0,argues that method not available for the analyses intended in here
+Gurevitch4,"A meta-analysis of the effects of ultraviolet B radiation and its synergistic interactions with pH, contaminants, and disease on amphibian survival",2008,lnRR,1,uses a modification of Hawkes
+Gurevitch5,The ontogeny of plant defense and herbivory: Characterizing general patterns using meta-analysis,2010,d,1,caculates something names interaction-d
+Gurevitch6,North Atlantic Oscillation signatures in aquatic and terrestrial ecosystems - A meta-analysis,2002,,0,
+Gurevitch7,Large-scale climatic signatures in lakes across Europe: A meta-analysis,2007,,0,
+Gurevitch8,The Prevalence and Importance of Competition among Coral Reef Fishes,2015,,0,
+Gurevitch9,Asymmetry in community regulation: Effects of predators and productivity,2006,lnRR,1,
+Gurevitch10,The impact of arbuscular mycorrhizal fungi on plant growth following herbivory: A search for pattern,2013,d,1,uses modifications by Morris
+Gurevitch11,Increased food supply mitigates ocean acidification effects on calcification but exacerbates effects on growth,2018,lnRR,1,cites Morris and Lajeunesse too
+Gurevitch12,Herbivore vs. nutrient control of marine primary producers: Context-dependent effects,2006,d,1,they also use lnRR but not for factorial ma arguing it is not possible
+Gurevitch13,Dispersal and species diversity: A meta-analysis,2006,,0,
+Gurevitch14,Gauging the impact of meta-analysis on ecology,2012,,0,
+Gurevitch15,The interaction between predation and competition: A review and synthesis,2002,d,1,"it does only so for a figure, I am not 100 percent sure they use the factorial ma formula"
+Gurevitch16,Does the combined application of organic and mineral nutrient sources influence maize productivity? A meta-analysis,2011,,0,
+Gurevitch17,Interactive and cumulative effects of multiple human stressors in marine systems,2008,d,1,
+Gurevitch18,Fine roots and ectomycorrhizas as indicators of environmental change,2007,,0,they argue that there were too few studies available to apply factorial ma
+Gurevitch19,Climate change in the Arctic: Using plant functional types in a meta-analysis of field experiments,2002,,0,
+Gurevitch20,"Direct fitness of group living mammals varies with breeding strategy, climate and fitness estimates",2012,,0,
+Gurevitch21,Understanding of the impact of chemicals on amphibians: A meta-analytic review,2012,d,1,
+Gurevitch22,Plant responses to soil heterogeneity and global environmental change,2012,,0,
+Gurevitch23,A cross-system synthesis of consumer and nutrient resource control on producer biomass,2008,lnRR,1,
+Gurevitch24,Meta-analysis and the science of research synthesis,2018,,0,
+Gurevitch25,Describing and understanding behavioral responses to multiple stressors and multiple stimuli,2017,d,1,
+Gurevitch26,Herbivory and plant resource competition: A review of two interacting interactions,2003,,0,
+Gurevitch27,Meta-analysis reveals complex marine biological responses to the interactive effects of ocean acidification and warming,2013,lnRR,1,
+Gurevitch28,Consumer control as a common driver of coastal vegetation worldwide,2016,g,1,
+Gurevitch29,Predation and fragmentation portrayed in the statistical structure of prey time series,2009,unknown,1,but it is not a meta-analysis
+Gurevitch30,Meta-analysis of grazer control of periphyton biomass across aquatic ecosystems,2009,,0,
+Gurevitch31,Top-down versus bottom-up control of autotrophic biomass - A meta-analysis on experiments with periphyton,2002,d,1,
+Gurevitch32,Light regime and consumer control of autotrophic biomass,2005,d,1,argues that the method is unfortunately not available for random effects ma
+Gurevitch33,Meta-analysis of the effects of predation on animal prey abundance: Evidence from UK vertebrates,2008,,0,
+Gurevitch34,Net effects of multiple stressors in freshwater ecosystems: A meta-analysis,2016,d,1,but I am not 100 percent sure they use the factorial ma formula
+Gurevitch35,"Coexistence, exclusion, or neutrality? A meta-analysis of competition between Aedes albopictus and resident mosquitoes",2010,,0,
+Gurevitch36,The mutualism-parasitism continuum in ectomycorrhizas: A quantitative assessment using meta-analysis,2008,,0,
+Gurevitch37,Handbook of meta-analysis in ecology and evolution,2013,,0,"book, pdf not available"
+Gurevitch38,Inferring associations among parasitic gamasid mites from census data,2009,,0,
+Gurevitch39,On the meta-analysis of response ratios for studies with correlated and multi-group designs,2011,unknown,1,method paper developing factorial ma further (i.e. Lajeunesse 2011)
+Gurevitch40,Multiple-stressor effects on freshwater fish: Importance of taxonomy and life stage,2018,d,1,
+Gurevitch41,Ontogenetic and sex differences influence alarm call responses in mammals: A meta-analysis,2011,,0,
+Gurevitch42,Nitrogen limitation of net primary productivity in terrestrial ecosystems is globally distributed,2008,,0,
+Gurevitch43,"Relative importance of competition and plantsoil feedback, their synergy, context dependency and implications for coexistence",2018,lnRR,1,
+Gurevitch44,Yes! there are resilient generalizations (or laws) in ecology,2016,,0,
+Gurevitch45,Re-analysis of meta-analysis: Support for the stress-gradient hypothesis,2006,,0,
+Gurevitch46,Is the change of plant-plant interactions with abiotic stress predictable? A meta-analysis of field results in arid environments,2005,,0,
+Gurevitch47,Geographical and experimental contexts modulate the effect of warming on top-down control: a meta-analysis,2018,g,1,they do their own modification of the formula
+Gurevitch48,Practical application of meta-analysis results: Avoiding the double use of data,2005,,0,
+Gurevitch49,Birds help plants: A meta-analysis of top-down trophic cascades caused by avian predators,2011,,0,
+Gurevitch50,The influence of a salinity and nutrient gradient on coastal vs. upland tritrophic complexes,2004,d,1,
+Gurevitch51,Direct and interactive effects of enemies and mutualists on plant performance: A meta-analysis,2007,d,1,the main analysis is on lnRR but they report it also based on d in Appendix C
+Gurevitch52,What are the roadblocks to using population models in ecotoxicology studies?,2017,,0,
+Gurevitch53,Invasive plants do not display greater phenotypic plasticity than their native or non-invasive counterparts: A meta-analysis,2011,,0,
+Gurevitch54,Reconceptualizing synergism and antagonism among multiple stressors,2015,d,1,but I am not 100 percent sure they use the factorial ma formula
+Gurevitch55,A review and meta-analysis of the effects of multiple abiotic stressors on marine embryos and larvae,2015,d,1,
+Gurevitch56,"A meta-analysis of the response of soil respiration, net nitrogen mineralization, and aboveground plant growth to experimental ecosystem warming",2001,,0,
+Gurevitch57,Alien predators are more dangerous than native predators to prey populations,2007,,0,
+Gurevitch58,Predator manipulation experiments: Impacts on populations of terrestrial vertebrate prey,2010,,0,
+Gurevitch59,Venue and outcome in ecological experiments: Manipulations of larval anurans,2001,,0,
+Gurevitch60,Effect of a change in physical structure and cover on fish and fish habitat in freshwater ecosystems- A review and meta-analysis,2007,,0,
+Gurevitch61,Junk-food in marine ecosystems,2008,,0,
+Gurevitch62,An improved null model for assessing the net effects of multiple stressors on communities,2018,,0,
+Gurevitch63,A broad framework to organize and compare ecological invasion impacts,2011,,0,they argue that there were too few studies available to apply factorial ma
+Gurevitch64,Impacts of marine invaders on biodiversity depend on trophic position and functional similarity,2014,,0,
+Gurevitch65,Bridging meta-analysis and the comparative method: A test of seed size effect on germination after frugivores gut passage,2004,,0,
+Gurevitch66,Meta-analysis of foraging and predation risk trade-offs in terrestrial systems,2006,,0,
+Gurevitch67,Can parasites really reveal environmental impact?,2010,d,1,
+Gurevitch68,UV effects that come and go: A global comparison of marine benthic community level impacts,2004,d,1,
+Gurevitch69,What drives population-level effects of parasites? Meta-analysis meets life-history,2013,,0,
+Gurevitch70,Consumer versus resource control of species diversity and ecosystem functioning,2002,d,1,
+Gurevitch71,Meta-analysis in ecology,2001,,0,
+Gurevitch72,Use of quality control charts for detection of outliers and temporal trends in cumulative meta-analysis,2010,,0,
+Gurevitch73,Consequences of simultaneous elevation of carbon dioxide and temperature for plant-herbivore interactions: a metaanalysis,2006,,0,though they thought about it
+Gurevitch74,Dissipation of polycyclic aromatic hydrocarbons (PAHs) in the rhizosphere: Synthesis through meta-analysis,2010,,0,Gurevitch et al 2000 is not on the list of references but I have no access to the appendix
+Gurevitch75,THE QUARTERLY REVIEW OF BIOLOGY,2016,,,DUPLICATED actually same as Gurevitch44
+Gurevitch76,Continuous but diverse advancement of spring-summer phenology in response to climate warming across the Qinghai-Tibetan Plateau,2016,,0,
+Gurevitch77,Individual and combined effects of multiple global change drivers on terrestrial phosphorus pools: A meta-analysis,2018,d,1,
+Gurevitch78,Effects of zooplankton grazing on colony formation in algae: A review,2005,,,I have no access to the pdf
