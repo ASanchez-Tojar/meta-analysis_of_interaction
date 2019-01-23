@@ -26,10 +26,9 @@
 ##############################################################
 
 # load pacakges
-install.packages("revtools")
+#install.packages("revtools")
 #devtools::install_github("mjwestgate/revtools")
 library(revtools) 
-#library(plyr)
 
 # cleaning up
 rm(list=ls())
@@ -96,30 +95,95 @@ Lajeunesse.included <- Lajeunesse[substr(Lajeunesse$notes, 32,35)=="true",] #sub
 lnRR <- unique(rbind(Hawkes.included,Morris.included,Lajeunesse.included))
 
 
-# searching duplicates using revtools
-search.duplicated <- find_duplicates(data = lnRR,
-                                     match_variable = "title",
-                                     group_variable = NULL,
-                                     match_function = "fuzzdist",
-                                     method = "fuzz_partial_ratio",
-                                     threshold = 0)
+# The following code was originally used to find the duplicates
+# however, on the 23rd of Jan, 2019, I realized that that code
+# was not performing as I expected. I have therefore implemented
+# some changes in the code, but still kept the original code, plus
+# used the original output to avoid additional work. See further
+# explanations below.
+
+# # searching duplicates using revtools
+# search.duplicated <- find_duplicates(data = lnRR,
+#                                      match_variable = "title",
+#                                      group_variable = NULL,
+#                                      match_function = "fuzzdist",
+#                                      method = "fuzz_partial_ratio",
+#                                      threshold = 0)
+# 
+# 
+# # extracing duplicates
+# lnRR.unique <- extract_unique_references(lnRR, search.duplicated)
+# lnRR.unique <- lnRR.unique[order(lnRR.unique$title),]
+# 
+# 
+# # generating a simpler unique idenfier for the included papers
+# lnRR.unique$studyID <- paste0("lnRR",1:nrow(lnRR.unique))
+# 
+# write.csv(lnRR.unique,
+#           "output_rayyan/lnRR_included_full.csv",row.names=FALSE)
+# 
+# 
+# #reducing the number of variables to make it more handy
+# lnRR.unique.veryreduced <- lnRR.unique[,c("studyID","title","year")]
+# 
+# write.csv(lnRR.unique.veryreduced,
+#           "output_rayyan/lnRR_included_reduced.csv",row.names=FALSE)
+
+
+# First, importing the files obtained with the original code. The 
+# idea is to compare these original files with the new ones to find
+# the differences and work on those differences rather than
+# repeating the whole process again.
+lnRR.unique <- read.table("output_rayyan/lnRR_included_full.csv",header=T,sep=",") 
+lnRR.unique.veryreduced <- read.table("output_rayyan/lnRR_included_reduced.csv",header=T,sep=",") 
+
+
+# searching duplicates using revtools: updated code with 
+# threshold = 0.1 and method = "fuzz_m_ratio", whose 
+# performance has been confirmed
+search.duplicated.v2 <- find_duplicates(data = lnRR,
+                                        match_variable = "title",
+                                        group_variable = NULL,
+                                        match_function = "fuzzdist",
+                                        method = "fuzz_m_ratio",
+                                        threshold = 0.1)
 
 
 # extracing duplicates
-lnRR.unique <- extract_unique_references(lnRR, search.duplicated)
-lnRR.unique <- lnRR.unique[order(lnRR.unique$title),]
+lnRR.unique.v2 <- extract_unique_references(lnRR, search.duplicated.v2)
+lnRR.unique.v2 <- lnRR.unique.v2[order(lnRR.unique.v2$title),]
+
+
+# Next step is to find those references that were not included
+# in the original output, so that we can do the full text
+# screening of those. We use revtools again, but search by 
+# exact match
+
+lnRR.orig.new <- rbind(subset(lnRR.unique, select=- c(studyID)),
+                       lnRR.unique.v2)
+
+# searching duplicates using revtools
+search.duplicated.v3 <- find_duplicates(data = lnRR.orig.new,
+                                        match_variable = "title",
+                                        group_variable = NULL,
+                                        match_function = "exact")
+
+# extracting only the additional references that need full-text
+# screening
+all.unique.refs <- extract_unique_references(lnRR.orig.new, search.duplicated.v3)
+
+additional.unique.refs <- all.unique.refs[all.unique.refs$n_duplicates==1,]
 
 
 # generating a simpler unique idenfier for the included papers
-lnRR.unique$studyID <- paste0("lnRR",1:nrow(lnRR.unique))
+additional.unique.refs$studyID <- paste0("lnRR",1:nrow(additional.unique.refs),"_v2")
 
-write.csv(lnRR.unique,
-          "output_rayyan/lnRR_included_full.csv",row.names=FALSE)
+write.csv(additional.unique.refs,
+          "output_rayyan/lnRR_included_full_v2_additional_refs.csv",row.names=FALSE)
 
 
 #reducing the number of variables to make it more handy
-lnRR.unique.veryreduced <- lnRR.unique[,c("studyID","title","year")]
+additional.unique.refs.veryreduced <- additional.unique.refs[,c("studyID","title","year")]
 
-write.csv(lnRR.unique.veryreduced,
-          "output_rayyan/lnRR_included_reduced.csv",row.names=FALSE)
-
+write.csv(additional.unique.refs.veryreduced,
+          "output_rayyan/lnRR_included_reduced_v2_additional_refs.csv",row.names=FALSE)
