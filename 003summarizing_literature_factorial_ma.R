@@ -105,11 +105,18 @@ dev.off()
 # Factorial meta-analysis based on lnRR [Hawkes & Sullivan 2001, Morris et al 2007, Lajeuness 2011]
 ####################################################################################################
 
-factorial.lnRR <- read.table("the_final_database/lnRR_included_reduced_DATA.csv",
+factorial.lnRR.1 <- read.table("the_final_database/lnRR_included_reduced_DATA.csv",
                             header=TRUE,sep=",")
 
+factorial.lnRR.2 <- read.table("the_final_database/lnRR_included_reduced_v2_additional_refs_DATA.csv",
+                             header=TRUE,sep=",")
+
+factorial.lnRR <- rbind(factorial.lnRR.1,factorial.lnRR.2)
+
+
 factorial.lnRR.subset <- factorial.lnRR[!(is.na(factorial.lnRR$methods_used)),]
-factorial.lnRR.subset <- factorial.lnRR.subset[factorial.lnRR.subset$methods_used==1,]
+#factorial.lnRR.subset <- factorial.lnRR.subset[factorial.lnRR.subset$methods_used==1,]
+factorial.lnRR.subset <- factorial.lnRR.subset[factorial.lnRR.subset$reported_effect_size_used=="lnRR",]
 
 
 factorial.lnRR.per.year <- summaryBy(methods_used~year,data=factorial.lnRR.subset,FUN=sum)
@@ -140,10 +147,10 @@ op <- par(mgp=c(1,0.35,0), mar = c(3.5,3.25,0.5,0)) #bottom, left, top, and righ
 x <- barplot(factorial.lnRR.per.year$methods_used.sum,factorial.lnRR.per.year$year,
              yaxt="n",
              xaxt="n",
-             ylim=c(0,4),
+             ylim=c(0,5),
              col=rgb(196/255,196/255,196/255,0.8))
 
-axis(2,at=seq(0,4,1),
+axis(2,at=seq(0,5,1),
      cex.axis=0.7,tck=-0.015,las=2)
 
 axis(1,at=x,
@@ -183,16 +190,16 @@ op <- par(mgp=c(1,0.35,0), mar = c(3.5,3.25,0.5,0)) #bottom, left, top, and righ
 x <- barplot(factorial.red$total,factorial.red$year,
              yaxt="n",
              xaxt="n",
-             ylim=c(0,5),
+             ylim=c(0,6),
              col=rgb(196/255,196/255,196/255,0.8))
 
 barplot(factorial.lnRR.per.year$methods_used.sum,factorial.lnRR.per.year$year,
         yaxt="n",
         xaxt="n",
-        ylim=c(0,5),
+        ylim=c(0,6),
         col=rgb(77/255,77/255,77/255,0.8),add=T)
 
-axis(2,at=seq(0,5,1),
+axis(2,at=seq(0,6,1),
      cex.axis=0.7,tck=-0.015,las=2,line=0.5)
 
 axis(1,at=x,
@@ -204,8 +211,8 @@ title(xlab = "Year",
       cex.lab=1.25,line=2)
 
 
-legend(2000,4.8,
-       c("d/g",
+legend(2000,5.8,
+       c("Hedge's d/g",
          "lnRR"),
        pt.bg=c(rgb(196/255,196/255,196/255,0.8),rgb(77/255,77/255,77/255,0.8)),
        pt.cex=1,
