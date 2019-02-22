@@ -97,7 +97,7 @@ lnRR <- unique(rbind(Hawkes.included,Morris.included,Lajeunesse.included))
 
 # The following code was originally used to find the duplicates
 # however, on the 23rd of Jan, 2019, I realized that that code
-# was not performing as I expected. I have therefore implemented
+# was not performing as I expected. Therefore I have implemented
 # some changes in the code, but still kept the original code, plus
 # used the original output to avoid additional work. See further
 # explanations below.
@@ -168,15 +168,20 @@ search.duplicated.v3 <- find_duplicates(data = lnRR.orig.new,
                                         group_variable = NULL,
                                         match_function = "exact")
 
-# extracting only the additional references that need full-text
-# screening
+# extracting only the additional references that need further
+# full-text screening
 all.unique.refs <- extract_unique_references(lnRR.orig.new, search.duplicated.v3)
 
 additional.unique.refs <- all.unique.refs[all.unique.refs$n_duplicates==1,]
 
 
 # generating a simpler unique idenfier for the included papers
-additional.unique.refs$studyID <- paste0("lnRR",1:nrow(additional.unique.refs),"_v2")
+
+
+startingpoint <- max(as.numeric(substr(as.character(lnRR.unique$studyID), 5, 6)))+1
+endpoint <- nrow(additional.unique.refs)+startingpoint-1
+
+additional.unique.refs$studyID <- paste0("lnRR",startingpoint:endpoint)
 
 write.csv(additional.unique.refs,
           "output_rayyan/lnRR_included_full_v2_additional_refs.csv",row.names=FALSE)
