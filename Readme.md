@@ -12,17 +12,17 @@ This repository contains the code and data used for a literature review on the u
 
 ## Folders:
 
-*equation_examples*: contains some screenshots from some of the included papers.
+`equation_examples`: contains some screenshots from some of the included papers.
 
-*literature_searches_results*: contains all the .bib and .nbib files extracted from Web of Science, PubMed and Scopus.
+`literature_searches_results`: contains all the .bib and .nbib files extracted from Web of Science, PubMed and Scopus.
 
-*output_cleaning_reference_list*: contains all the files created during the deduplication process.
+`output_cleaning_reference_list`: contains all the files created during the deduplication process.
 
-*output_rayyan*: contains the files extracted from [Rayyan](https://rayyan.qcri.org) after Title+Abstract screening was finished.
+`output_rayyan`: contains the files extracted from [Rayyan](https://rayyan.qcri.org) after Title+Abstract screening was finished.
 
-*plots*: contains plots showing the number of papers using factorial meta-analysis over time.
+`plots`: contains plots showing the number of papers using factorial meta-analysis over time.
 
-*the_final_database*: contains the data on which of the full texts screened actually used a factorial meta-analysis.
+`the_final_database`: contains the data on which of the full texts screened actually used a factorial meta-analysis.
 
 ### Notes:
 
