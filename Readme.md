@@ -32,4 +32,4 @@ Literature search conducted on the 15th of November, 2018.
 
 Titles and abstracts screening conducted using [Rayyan](https://rayyan.qcri.org). Addtional information regarding the literature review can be found in [here](https://docs.google.com/document/d/1mlEl7E_svDc9WiZDHy1V4DMDlvqfyKpjildiH2duL4I/edit?usp=sharing) or [here](https://docs.google.com/document/d/1mlEl7E_svDc9WiZDHy1V4DMDlvqfyKpjildiH2duL4I/edit?usp=sharing).
 
-More informationa about this project available at the [OSF] (to be announced) or can be requested via email to: alfredo.tojar@gmail.com
+More information about this project available at the [OSF] (to be announced) or can be requested via email to: alfredo.tojar@gmail.com
